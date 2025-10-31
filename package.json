@@ -1,0 +1,23 @@
+{
+  "name": "binary-search-trees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Binary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Basliel-Sisay/Binary-search-Trees.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Basliel-Sisay/Binary-search-Trees/issues"
+  },
+  "homepage": "https://github.com/Basliel-Sisay/Binary-search-Trees#readme",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
+}
