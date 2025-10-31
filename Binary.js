@@ -33,3 +33,38 @@ class Tree{
         return node;
     }
 }
+class Solution {
+    constructor() {
+        this.res = [];
+    }    
+    inorderTraversal(root) {
+        this.res =[];
+        if (root === null) {
+            return this.res;
+        }  
+        this.inorderTraversal(root.left);
+        this.res.push(root.data);
+        this.inorderTraversal(root.right);
+        return this.res;
+    }
+    preOrderTraversal(root){
+        this.res =[];
+        if(root === null){
+            return this.res;
+        }
+        this.res.push(root.data);
+        this.preOrderTraversal(root.left);
+        this.preOrderTraversal(root.right);
+        return this.res;
+    }
+    postOrderTraversal(root){
+        this.res =[];
+        if(root === null){
+            return this.res;
+        }
+        this.postOrderTraversal(root.left);
+        this.postOrderTraversal(root.right);
+        this.res.push(root.data);
+        return this.res;
+    }
+}
