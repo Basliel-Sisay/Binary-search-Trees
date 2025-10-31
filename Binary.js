@@ -34,37 +34,38 @@ class Tree{
     }
 }
 class Solution {
-    constructor() {
-        this.res = [];
-    }    
     inorderTraversal(root) {
-        this.res =[];
-        if (root === null) {
-            return this.res;
-        }  
-        this.inorderTraversal(root.left);
-        this.res.push(root.data);
-        this.inorderTraversal(root.right);
-        return this.res;
+      const res = [];
+      function traverse(node) {
+        if (node === null) return;
+        traverse(node.left);
+        res.push(node.data);
+        traverse(node.right);
     }
-    preOrderTraversal(root){
-        this.res =[];
-        if(root === null){
-            return this.res;
-        }
-        this.res.push(root.data);
-        this.preOrderTraversal(root.left);
-        this.preOrderTraversal(root.right);
-        return this.res;
+      traverse(root);
+      return res;
+}
+    preOrderTraversal(root) {
+      const res = [];
+      function traverse(node) {
+        if (node === null) return;
+        res.push(node.data);
+        traverse(node.left);
+        traverse(node.right);
     }
-    postOrderTraversal(root){
-        this.res =[];
-        if(root === null){
-            return this.res;
-        }
-        this.postOrderTraversal(root.left);
-        this.postOrderTraversal(root.right);
-        this.res.push(root.data);
-        return this.res;
+      traverse(root);
+      return res;
+}
+    postOrderTraversal(root) {
+      const res = [];
+      function traverse(node) {
+        if (node === null) return;
+        traverse(node.left);
+        traverse(node.right);
+        res.push(node.data);
+    }
+    traverse(root);
+    return res;
     }
 }
+module.exports ={Tree, Solution};
